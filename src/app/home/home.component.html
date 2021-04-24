@@ -1,0 +1,9 @@
+<app-top-bar></app-top-bar>
+<img src="../../assets/home.png">
+<div class="sections">
+  <div *ngFor="let section of sections">
+    <app-section [current]="section">
+    </app-section>
+  </div>
+</div>
+<app-footer></app-footer>

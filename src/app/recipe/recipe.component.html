@@ -1,0 +1,17 @@
+<app-top-bar></app-top-bar>
+<div *ngFor="let recipes of recipe" id="full">
+
+  <img *ngIf="recipes.image" src="{{recipes.image}}" id="img" style="width: 200px;">
+  <a ><h3 id="name" >
+    <a [title]="recipes.name">
+      {{ recipes.name}}
+    </a>
+  </h3>
+  <p *ngIf="recipes.description" id="txt" >
+    By:{{recipes.By}} <br>
+    <img src="https://st.depositphotos.com/1318729/1471/i/950/depositphotos_14710225-stock-photo-five-yellow-stars-in-a.jpg" id="rating">
+    {{recipes.rating}} ratings <br>
+    Description: {{ recipes.description }}<br>
+
+  </p></a>
+</div>

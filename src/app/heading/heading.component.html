@@ -1,0 +1,13 @@
+<div>
+  <div class="wrap">
+    <a (click)="showSubtopicsComponent()" class="link">{{heading.name }}</a>
+    <div class="buttons">
+      <button routerLink="/heading/{{ heading.id }}/edit"><span>Edit</span></button>
+      <button (click)="delete(heading.id)"><span>Delete</span></button>
+    </div>
+  </div>
+  <div *ngIf="showSubheadings">
+    <app-subheading [heading]="heading">
+    </app-subheading>
+  </div>
+</div>

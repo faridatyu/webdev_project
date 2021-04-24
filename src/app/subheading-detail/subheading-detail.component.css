@@ -1,0 +1,11 @@
+button {
+  display: inline-block;
+  position: relative;
+  border: none;
+  color: rgb(187, 180, 172);
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 18px 30px;
+  background: yellow;
+}
