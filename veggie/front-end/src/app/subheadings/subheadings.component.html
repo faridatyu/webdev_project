@@ -1,8 +1,8 @@
 <div>
   <button (click)="showCreateComponent()" class="add-sub"><span>Add new subheading</span></button>
   <div *ngIf="showComponent">
-    <app-create-subheading [curheading]="heading">
-    </app-create-subheading>
+    <app-make-subheading [curheading]="heading">
+    </app-make-subheading>
   </div>
   <div *ngFor="let subheading of subheadings" class="whole">
     <div class="wrap">
