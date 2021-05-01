@@ -1,0 +1,22 @@
+<app-top-bar></app-top-bar>
+<div class="main-area">
+  <div class="block">
+    <div *ngIf="subheading">
+      <h2>{{subheading.name | uppercase}} Details</h2>
+      <div>
+        <h4>id: {{subheading.id}}</h4>
+      </div>
+      <div>
+        <h4>Name:</h4>
+        <input [(ngModel)]="subheading.name" placeholder="Name" />
+        <h4>Description:</h4>
+        <input [(ngModel)]="subheading.description" placeholder="Description" />
+        <h4>Recipe:</h4>
+        <p [innerHTML]="subheading.code"></p>
+        <input [(ngModel)]="subheading.code" placeholder="Code" />
+      </div>
+      <button (click)="save()"><span>Save</span></button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
