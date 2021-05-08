@@ -1,0 +1,25 @@
+<div class="outer">
+  <div class="inner">
+    <div class="flex">
+
+    <div class="block">
+      <h2>
+        {{ current.name }}
+      </h2>
+      <p>
+        {{ current.description }}
+      </p>
+      <div *ngIf="user.is_staff == 1; else regular" class="buttons">
+        <button routerLink="/sections/{{current.id}}/explorer"><img src="../../assets/files.png" alt=""></button>
+        <button routerLink="/sections/{{current.id}}/editor"><img src="../../assets/edit.png" alt=""></button>
+      </div>
+      <ng-template #regular>
+        <button class="buttons"><img src="../../assets/files.png" alt=""></button>
+      </ng-template>
+    </div>
+      <div class="image">
+        <img src="{{ current.image }}"height="400">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<app-top-bar></app-top-bar>
+<div class="main-area">
+  <div class="main-block">
+    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F282674.jpg&w=272&h=272&c=sc&poi=face&q=85">
+    <h1>{{ section.name }}</h1>
+    <button class="add-topic-btn" (click)="showCreateComponent()"><span>Add recipe</span></button>
+    <div *ngIf="showComponent">
+      <app-make-heading>
+      </app-make-heading>
+    </div>
+    <div class="topics">
+      <div *ngFor="let heading of headings">
+        <app-heading [heading]="heading">
+        </app-heading>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

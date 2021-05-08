@@ -1,0 +1,16 @@
+<div>
+  <button (click)="showCreateComponent()" class="add-sub"><span>Add new subheading</span></button>
+  <div *ngIf="showComponent">
+    <app-make-subheading [curheading]="heading">
+    </app-make-subheading>
+  </div>
+  <div *ngFor="let subheading of subheadings" class="whole">
+    <div class="wrap">
+      <a>{{ subheading.name }}</a>
+      <div class="buttons">
+        <button routerLink="/subheadings/{{ subheading.id }}/edit"><span><img src="https://preview.pixlr.com/images/800wm/100/1/1001394601.jpg" width="20px"></span></button>
+        <button (click)="delete(subheading.id)"><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9LtaUWVH0PyeUpmxjYzy_0WhWO6bpDpD4jsZ0Om1qD2q2u3Lg_Kp_dLHxlaaSGO_aUWU&usqp=CAU" width="20px"></span></button>
+      </div>
+    </div>
+  </div>
+</div>

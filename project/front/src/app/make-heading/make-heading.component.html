@@ -1,0 +1,9 @@
+<div class="block">
+  <form>
+    <input type="text" placeholder="Name" #headingName />
+    <input type="text" placeholder="Description" #headingDescription />
+    <button (click)="add(headingName.value, headingDescription.value); headingName.value=''; headingDescription.value=''">
+      <span>Add</span>
+    </button>
+  </form>
+</div>
